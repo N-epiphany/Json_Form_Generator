@@ -22,7 +22,7 @@ const Switch = ({
           disabled={immutable}
         />
         <label htmlFor="" className="text-xs font-semibold">
-          {label}
+          {label}{required&&<span className="font-normal text-red-500">*</span>}
         </label>
       </div>
     </>

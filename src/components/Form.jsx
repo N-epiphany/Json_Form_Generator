@@ -5,12 +5,15 @@ import Group from "./UI/Group";
 import Input from "./UI/Input";
 import Radio from "./UI/Radio";
 import Toggle from "./UI/Toggle";
+import FormDataDisplay from "./DataSubmited";
 
 const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
   const [outerToggle, setOuterToggle] = useState(false);
   const [innerToggle, setInnerToggle] = useState(false);
   const [requiredInner, setRequiredInner] = useState([]);
   const [requiredAll, setRequiredAll] = useState(false);
+  const [submittedData, setSubmittedData] = useState(null); // Track submitted data
+
 
   // parsing form to JSON
   let formJson;
@@ -68,16 +71,21 @@ const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
     console.log(data);
+    setSubmittedData(data);
     setJsonForm("[]");
     setOuterToggle(false)
     setInnerToggle(false)
     setRequiredInner([])
     setRequiredAll(false)
+    
+  };
+  const closeModal = () => {
+    setSubmittedData(null); // Clear submitted data
   };
 
   return (
     <div className={`bg-slate-900 text-white flex flex-col p-1 ${className}`}>
-      <h1 className="bg-violet-900 p-2 rounded-md pl-3">Form</h1>
+      <h1 className=" bg-blue-600  p-2 rounded-md pl-3">Form</h1>
       <div className="flex-grow flex justify-center items-center ">
         {/* Form */}
         {formJson?.length !== 0 && (
@@ -156,7 +164,8 @@ const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
                                 {subd.uiType === "Input" && (
                                   <Input
                                     jsonKey={subd.jsonKey}
-                                    label={subd.label.split("_").join(" ")}
+                                    label={subd.label.
+                                    split("_").join(" ")}
                                     placeholder={subd.placeholder}
                                     description={subd.description}
                                     required={subd.validate.required}
@@ -169,6 +178,8 @@ const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
                                     //  label={subd.label.split("_").join(" ")}
                                     //  placeholder={subd.placeholder}
                                     //  description={subd.description}
+                                    required={subd.validate.required} 
+                                    // {/* Add this line */}
                                     defaultValue={subd.validate.defaultValue}
                                     immutable={subd.validate.immutable}
                                     options={subd.validate.options}
@@ -246,6 +257,8 @@ const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
                                       //  label={subd.label.split("_").join(" ")}
                                       //  placeholder={subd.placeholder}
                                       //  description={subd.description}
+                                      required={subd.validate.required} 
+                                      // {/* Add this line */}
                                       defaultValue={subd.validate.defaultValue}
                                       immutable={subd.validate.immutable}
                                       options={subd.validate.options}
@@ -531,7 +544,7 @@ const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
                   onClick={(e) => cancelHandler(e)}
                   className="px-2 py-1 rounded-md border border-slate-400"
                 >
-                  Cancle
+                  Cancel
                 </button>
                 <button
                   type="submit"
@@ -544,6 +557,9 @@ const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
           </form>
         )}
       </div>
+      {submittedData && (
+        <FormDataDisplay jsonData={submittedData} onClose={closeModal} />
+      )}
     </div>
   );
 };

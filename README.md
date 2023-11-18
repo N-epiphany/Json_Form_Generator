@@ -7,7 +7,7 @@ A React application that will allow users to paste a UI schema on the left side 
 Clone the project
 
 ```bash
-  git clone https://github.com/Mohit-Thapliyal/Frontend-Assignment.git
+  git clone 
 ```
 
 Go to the project directory
@@ -40,9 +40,9 @@ Build Project
   npm run build
 ```
 ## Link
-https://frontend-assignment-amber.vercel.app
+
 
 ## Screenshots
 
-![plot1](./demo/assignment_first.png)
-![plot2](./demo/assignment_second.png)
+![plot1]()
+![plot2]()

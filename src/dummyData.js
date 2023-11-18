@@ -1,9 +1,10 @@
+//Dummy Data Set to Test 
 const dummyData = [
     [
         {
           "sort": 1,
           "label": "Pizza Name",
-          "description": "",
+          "description": "Name of the Pizza",
           "validate": {
             "required": true,
             "immutable": false
@@ -12,7 +13,7 @@ const dummyData = [
           "uiType": "Input",
           "icon": "",
           "level": 0,
-          "placeholder": ""
+          "placeholder": "Enter Pizza Name"
         },
         {
           "sort": 4,
@@ -375,7 +376,7 @@ const dummyData = [
         {
           "sort": 1,
           "label": "Pasta Name",
-          "description": "",
+          "description": "Name of the Pasta",
           "validate": {
             "required": true,
             "immutable": false
@@ -384,7 +385,7 @@ const dummyData = [
           "uiType": "Input",
           "icon": "",
           "level": 0,
-          "placeholder": ""
+          "placeholder": "Enter Pasta Name"
         },
         {
           "sort": 10001,

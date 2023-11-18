@@ -15,7 +15,7 @@ const Json = ({ className, setJsonForm, setJsonFormHeading }) => {
     <div
       className={`bg-gray-900 border-r border-gray-500 text-white flex flex-col items-center p-1 ${className}`}
     >
-      <h1 className="bg-violet-900 p-2 w-full rounded-md pl-3">
+      <h1 className=" bg-blue-600  p-2 w-full rounded-md pl-3">
         Enter the UI-Schema in JSON
       </h1>
       <div className="w-full p-2 mt-2">
@@ -41,15 +41,15 @@ const Json = ({ className, setJsonForm, setJsonFormHeading }) => {
         ></textarea>
       </div>
       <div className="flex w-full gap-2 px-2">
-        <div onClick={()=>{setFormHeading("Yummy Pizza"); setFormData(JSON.stringify(dummyData[0]))}} className="flex flex-grow justify-center text-sm font-medium bg-violet-800 py-2 rounded-md active:scale-95 duration-200 cursor-pointer">Dummy Data 1</div>
-        <div onClick={()=>{setFormHeading("Tasty Pasta"); setFormData(JSON.stringify(dummyData[1]))}} className="flex flex-grow justify-center text-sm font-medium bg-violet-800 py-2 rounded-md active:scale-95 duration-200 cursor-pointer">Dummy Data 2</div>
+        <div onClick={()=>{setFormHeading("New Pizza"); setFormData(JSON.stringify(dummyData[0]))}} className="flex flex-grow justify-center text-sm font-medium bg-blue-600 py-2 rounded-md active:scale-95 duration-200 cursor-pointer">Create Pizza form UI-Schema</div>
+        <div onClick={()=>{setFormHeading("Create Pasta"); setFormData(JSON.stringify(dummyData[1]))}} className="flex flex-grow justify-center text-sm font-medium bg-blue-600  py-2 rounded-md active:scale-95 duration-200 cursor-pointer">Create Pasta form UI-Schema</div>
       </div>
       <div className="w-full p-2">
         <button
           onClick={submitHandler}
           type="submit"
           disabled={formData === "" || formHeading === ""}
-          className="bg-violet-800 py-2 uppercase w-full rounded-md duration-200 active:scale-95 disabled:scale-100 disabled:opacity-50 disabled:cursor-not-allowed"
+          className=" bg-blue-600 py-2 uppercase w-full rounded-md duration-200 active:scale-95 disabled:scale-100 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           submit
         </button>
