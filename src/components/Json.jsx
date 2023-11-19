@@ -1,15 +1,16 @@
+// JSON.jsx
 import React, { useState } from "react";
 import dummyData from "../dummyData";
 
 const Json = ({ className, setJsonForm, setJsonFormHeading }) => {
-  const [formHeading, setFormHeading] = useState("")
+  const [formHeading, setFormHeading] = useState("");
   const [formData, setFormData] = useState("");
   const submitHandler = (e) => {
     e.preventDefault();
     setJsonForm(formData);
     setFormData("");
     setJsonFormHeading(formHeading);
-    setFormHeading("")
+    setFormHeading("");
   };
   return (
     <div
@@ -20,10 +21,10 @@ const Json = ({ className, setJsonForm, setJsonFormHeading }) => {
       </h1>
       <div className="w-full p-2 mt-2">
         <input
-        value={formHeading}
-        onChange={(e) => {
-          setFormHeading(e.target.value);
-        }}
+          value={formHeading}
+          onChange={(e) => {
+            setFormHeading(e.target.value);
+          }}
           type="text"
           className="w-full bg-gray-800 px-4 py-3 text-sm outline-none rounded-lg"
           placeholder="Enter the Heading"
@@ -41,8 +42,24 @@ const Json = ({ className, setJsonForm, setJsonFormHeading }) => {
         ></textarea>
       </div>
       <div className="flex w-full gap-2 px-2">
-        <div onClick={()=>{setFormHeading("New Pizza"); setFormData(JSON.stringify(dummyData[0]))}} className="flex flex-grow justify-center text-sm font-medium bg-blue-600 py-2 rounded-md active:scale-95 duration-200 cursor-pointer">Create Pizza form UI-Schema</div>
-        <div onClick={()=>{setFormHeading("Create Pasta"); setFormData(JSON.stringify(dummyData[1]))}} className="flex flex-grow justify-center text-sm font-medium bg-blue-600  py-2 rounded-md active:scale-95 duration-200 cursor-pointer">Create Pasta form UI-Schema</div>
+        <div
+          onClick={() => {
+            setFormHeading("New Pizza");
+            setFormData(JSON.stringify(dummyData[0]));
+          }}
+          className="flex flex-grow justify-center text-sm font-medium bg-blue-600 py-2 rounded-md active:scale-95 duration-200 cursor-pointer"
+        >
+          Create Pizza form UI-Schema
+        </div>
+        <div
+          onClick={() => {
+            setFormHeading("Create Pasta");
+            setFormData(JSON.stringify(dummyData[1]));
+          }}
+          className="flex flex-grow justify-center text-sm font-medium bg-blue-600  py-2 rounded-md active:scale-95 duration-200 cursor-pointer"
+        >
+          Create Pasta form UI-Schema
+        </div>
       </div>
       <div className="w-full p-2">
         <button

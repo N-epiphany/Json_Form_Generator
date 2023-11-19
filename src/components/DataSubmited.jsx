@@ -1,6 +1,7 @@
 //This component handles the pop up window that show the data submitted by the form
+// datasubmitted.jsx
 import React from "react";
-import "./App.css"
+import "./App.css";
 
 const FormDataDisplay = ({ jsonData, onClose }) => {
   return (
@@ -9,7 +10,7 @@ const FormDataDisplay = ({ jsonData, onClose }) => {
         <span className="close" onClick={onClose}>
           &times;
         </span>
-        Form Submitted 
+        Form Submitted
         <pre>{JSON.stringify(jsonData, null, 2)}</pre>
       </div>
     </div>

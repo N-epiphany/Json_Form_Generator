@@ -1,3 +1,4 @@
+// Switch.jsx
 import React from "react";
 
 const Switch = ({
@@ -7,7 +8,7 @@ const Switch = ({
   description,
   required,
   immutable,
-  defaultValue
+  defaultValue,
 }) => {
   return (
     <>
@@ -22,7 +23,8 @@ const Switch = ({
           disabled={immutable}
         />
         <label htmlFor="" className="text-xs font-semibold">
-          {label}{required&&<span className="font-normal text-red-500">*</span>}
+          {label}
+          {required && <span className="font-normal text-red-500">*</span>}
         </label>
       </div>
     </>

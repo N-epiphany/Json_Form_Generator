@@ -1,3 +1,4 @@
+// Form.jsx
 import React, { useState, useEffect } from "react";
 import Switch from "./UI/Switch";
 import Select from "./UI/Select";
@@ -13,7 +14,6 @@ const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
   const [requiredInner, setRequiredInner] = useState([]);
   const [requiredAll, setRequiredAll] = useState(false);
   const [submittedData, setSubmittedData] = useState(null); // Track submitted data
-
 
   // parsing form to JSON
   let formJson;
@@ -59,10 +59,10 @@ const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
   const cancelHandler = (e) => {
     e.preventDefault();
     setJsonForm("[]");
-    setOuterToggle(false)
-    setInnerToggle(false)
-    setRequiredInner([])
-    setRequiredAll(false)
+    setOuterToggle(false);
+    setInnerToggle(false);
+    setRequiredInner([]);
+    setRequiredAll(false);
   };
 
   // Form submit handler
@@ -73,11 +73,10 @@ const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
     console.log(data);
     setSubmittedData(data);
     setJsonForm("[]");
-    setOuterToggle(false)
-    setInnerToggle(false)
-    setRequiredInner([])
-    setRequiredAll(false)
-    
+    setOuterToggle(false);
+    setInnerToggle(false);
+    setRequiredInner([]);
+    setRequiredAll(false);
   };
   const closeModal = () => {
     setSubmittedData(null); // Clear submitted data
@@ -164,8 +163,7 @@ const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
                                 {subd.uiType === "Input" && (
                                   <Input
                                     jsonKey={subd.jsonKey}
-                                    label={subd.label.
-                                    split("_").join(" ")}
+                                    label={subd.label.split("_").join(" ")}
                                     placeholder={subd.placeholder}
                                     description={subd.description}
                                     required={subd.validate.required}
@@ -178,7 +176,7 @@ const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
                                     //  label={subd.label.split("_").join(" ")}
                                     //  placeholder={subd.placeholder}
                                     //  description={subd.description}
-                                    required={subd.validate.required} 
+                                    required={subd.validate.required}
                                     // {/* Add this line */}
                                     defaultValue={subd.validate.defaultValue}
                                     immutable={subd.validate.immutable}
@@ -257,7 +255,7 @@ const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
                                       //  label={subd.label.split("_").join(" ")}
                                       //  placeholder={subd.placeholder}
                                       //  description={subd.description}
-                                      required={subd.validate.required} 
+                                      required={subd.validate.required}
                                       // {/* Add this line */}
                                       defaultValue={subd.validate.defaultValue}
                                       immutable={subd.validate.immutable}

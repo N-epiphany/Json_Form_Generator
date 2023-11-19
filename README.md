@@ -1,7 +1,7 @@
-
 # Frontend-Assignment
 
 A React application that will allow users to paste a UI schema on the left side and preview the rendered form on the right-hand side.
+
 ## Run Locally
 
 Clone the project
@@ -39,10 +39,14 @@ Build Project
 ```bash
   npm run build
 ```
+
 ## Link
-https://frontend-assignment-ly89lmv2p-n-epiphany.vercel.app/
+
+frontend-assignment-virid.vercel.app
 
 ## Screenshots
 
-![plot1]()
-![plot2]()
+![plot1](/src/demo/ss1.png)
+![plot2](/src/demo/ss2.png)
+![plot3](/src/demo/ss3.png)
+![plot4](/src/demo/ss4.png)

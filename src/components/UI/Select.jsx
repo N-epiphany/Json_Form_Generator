@@ -1,3 +1,4 @@
+// Select.jsx
 import React from "react";
 import Description from "./Description";
 
@@ -13,7 +14,7 @@ const Select = ({
 }) => {
   let calculatedDefault;
   options?.forEach((d) => {
-    if((d.value===defaultValue)) calculatedDefault = d.value;
+    if (d.value === defaultValue) calculatedDefault = d.value;
   });
   // console.log(calculatedDefault);
   return (
