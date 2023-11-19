@@ -9,7 +9,7 @@ const FormDataDisplay = ({ jsonData, onClose }) => {
         <span className="close" onClick={onClose}>
           &times;
         </span>
-        Data Submitted 
+        Form Submitted 
         <pre>{JSON.stringify(jsonData, null, 2)}</pre>
       </div>
     </div>
