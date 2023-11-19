@@ -7,7 +7,7 @@ A React application that will allow users to paste a UI schema on the left side 
 Clone the project
 
 ```bash
-  git clone 
+  git clone https://github.com/N-epiphany/Frontend-Assignment
 ```
 
 Go to the project directory
@@ -40,7 +40,7 @@ Build Project
   npm run build
 ```
 ## Link
-
+https://frontend-assignment-ly89lmv2p-n-epiphany.vercel.app/
 
 ## Screenshots
 
