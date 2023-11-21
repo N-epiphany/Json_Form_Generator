@@ -42,7 +42,7 @@ Build Project
 
 ## Link
 
-frontend-assignment-virid.vercel.app
+[Live Demo](https://frontend-assignment-virid.vercel.app)
 
 ## Screenshots
 

@@ -173,11 +173,7 @@ const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
                                 {subd.uiType === "Radio" && (
                                   <Radio
                                     jsonKey={subd.jsonKey}
-                                    //  label={subd.label.split("_").join(" ")}
-                                    //  placeholder={subd.placeholder}
-                                    //  description={subd.description}
                                     required={subd.validate.required}
-                                    // {/* Add this line */}
                                     defaultValue={subd.validate.defaultValue}
                                     immutable={subd.validate.immutable}
                                     options={subd.validate.options}
@@ -252,11 +248,7 @@ const Form = ({ className, jsonForm, jsonFormHeading, setJsonForm }) => {
                                   {subd.uiType === "Radio" && (
                                     <Radio
                                       jsonKey={subd.jsonKey}
-                                      //  label={subd.label.split("_").join(" ")}
-                                      //  placeholder={subd.placeholder}
-                                      //  description={subd.description}
                                       required={subd.validate.required}
-                                      // {/* Add this line */}
                                       defaultValue={subd.validate.defaultValue}
                                       immutable={subd.validate.immutable}
                                       options={subd.validate.options}
