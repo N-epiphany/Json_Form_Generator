@@ -1,7 +1,13 @@
 // Group.jsx
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Group = ({ className, children, heading, required }) => {
+  // console.log(required);
+  const [astrik, setCount] = useState(false);
+  useEffect(() => {
+    setCount(required);
+    console.log(astrik);
+  }, [required]);
   return (
     <div
       className={` p-3 bg-[#FCFDFF] rounded-md border border-blue-100 flex flex-col gap-2 ${className}`}
@@ -9,7 +15,7 @@ const Group = ({ className, children, heading, required }) => {
       {heading && (
         <h2 className="text-sm font-semibold border-b pb-2 mb-1">
           {heading}
-          {<span className="ml-1 text-red-500">*</span>}
+          {astrik && <span className="font-normal text-red-500">*</span>}
         </h2>
       )}
       {children}
@@ -18,20 +24,3 @@ const Group = ({ className, children, heading, required }) => {
 };
 
 export default Group;
-// // Group.jsx
-// import React from 'react';
-
-// const Group = ({ className, children, heading, required }) => {
-//   return (
-//     <div className={`p-3 bg-[#FCFDFF] rounded-md border border-blue-100 flex flex-col gap-2 ${className}`}>
-//       {heading && (
-//         <h2 className='text-sm font-semibold border-b pb-2 mb-1'>
-//           {required ? `${heading} *` : heading}
-//         </h2>
-//       )}
-//       {children}
-//     </div>
-//   );
-// };
-
-// export default Group;
