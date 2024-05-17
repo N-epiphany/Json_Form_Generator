@@ -42,7 +42,7 @@ Build Project
 
 ## Link
 
-[Frontend Assignment](https://frontend-assignment-virid.vercel.app)
+[JSON Form Generator](https://frontend-assignment-virid.vercel.app)
 
 ## Screenshots
 
